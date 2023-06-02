@@ -20,12 +20,12 @@ git clone https://github.com/Fernando-LRz/myTasks-frontend.git
 ```bash
 cd myTasks-frontend
 ```
-3. install everything the frontend needs
+3. Install the packages
 ```bash
 npm install
 ```
 
-## Run the frontend
+## Run
 ```bash
 npm run dev
 ```
