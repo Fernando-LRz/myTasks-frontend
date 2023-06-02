@@ -27,5 +27,5 @@ npm install
 
 ## Run the frontend
 ```bash
-npm run start
+npm run dev
 ```
