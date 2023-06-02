@@ -20,7 +20,7 @@ git clone https://github.com/Fernando-LRz/myTasks-frontend.git
 ```bash
 cd myTasks-frontend
 ```
-3. Install everything needed to run the app
+3. install everything the frontend needs
 ```bash
 npm install
 ```
