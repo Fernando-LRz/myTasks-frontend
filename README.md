@@ -1,5 +1,5 @@
 # myTasks-frontend
-Simple to-do list built with the MERN stack. 
+To-do list web app built with the MERN stack 
 
 ## Features
  * Create account
@@ -14,13 +14,13 @@ Simple to-do list built with the MERN stack.
 ## Installation
 1. Clone the repository
 ```bash
-git clone https://github.com/Fernando-LRz/myTasks-frontend.git
+git clone https://github.com/Fernando-LRz/mytasks-frontend.git
 ``` 
-2. Go inside the project folder
+2. Navigate to the project directory
 ```bash
 cd myTasks-frontend
 ```
-3. Install the packages
+3. Install dependencies
 ```bash
 npm install
 ```
