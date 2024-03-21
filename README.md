@@ -1,4 +1,4 @@
-# myTasks-frontend
+# MyTasks: frontend
 Frontend of a to-do list web app built with the MERN stack.
 
 ## Features
