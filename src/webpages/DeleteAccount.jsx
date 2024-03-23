@@ -33,9 +33,9 @@ const DeleteAccount = () => {
     return (
         <>
             <AdminNav />
-            <h2 className='font-black text-3xl text-center mt-10'>Eliminar Cuenta</h2>
-            <p className='text-xl mt-5 mb-10 text-center'>Elimina tu {''} 
-                <span className='text-indigo-600 font-bold'>cuenta aquí</span>
+            <h2 className='font-black text-3xl text-center mt-10'>Eliminar cuenta</h2>
+            <p className='text-xl mt-5 mb-10 text-center'>Elimina tu cuenta y todos tus datos {''} 
+                <span className='text-indigo-600 font-bold'>aquí</span>
             </p>
 
             <div className='flex justify-center'>

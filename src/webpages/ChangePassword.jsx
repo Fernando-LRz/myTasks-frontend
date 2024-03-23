@@ -48,7 +48,7 @@ const changePassword = () => {
     return (
         <>
             <AdminNav />
-            <h2 className='font-black text-3xl text-center mt-10'>Cambiar Contraseña</h2>
+            <h2 className='font-black text-3xl text-center mt-10'>Cambiar contraseña</h2>
             <p className='text-xl mt-5 mb-10 text-center'>Modifica tu {''} 
                 <span className='text-indigo-600 font-bold'>contraseña aquí</span>
             </p>
@@ -62,7 +62,7 @@ const changePassword = () => {
                         onSubmit={ handleSubmit }
                     >
                         <div className='my-3'>
-                            <label htmlFor="name" className='uppercase font-bold text-gray-600'>Contraseña Actual</label>
+                            <label htmlFor="name" className='uppercase font-bold text-gray-600'>Contraseña actual</label>
                             <input 
                                 type="password"
                                 className='border bg-gray-50 w-full p-2 mt-5 rounded-lg'
@@ -75,7 +75,7 @@ const changePassword = () => {
                             />
                         </div>
                         <div className='my-3'>
-                            <label htmlFor="name" className='uppercase font-bold text-gray-600'>Nueva Contraseña</label>
+                            <label htmlFor="name" className='uppercase font-bold text-gray-600'>Nueva contraseña</label>
                             <input 
                                 type="password"
                                 className='border bg-gray-50 w-full p-2 mt-5 rounded-lg'
