@@ -24,7 +24,7 @@ const AuthProvider = ({children}) => {
             // Crear el header de configuración de axios
             const config = {
                 headers: {
-                    "Content-Type": "application/json",
+                    'Content-Type': 'application/json',
                     Authorization: `Bearer ${token}`
                 }
             };
@@ -69,7 +69,7 @@ const AuthProvider = ({children}) => {
         // Crear el header de configuración de axios
         const config = {
             headers: {
-                "Content-Type": "application/json",
+                'Content-Type': 'application/json',
                 Authorization: `Bearer ${token}`
             }
         };
@@ -107,7 +107,7 @@ const AuthProvider = ({children}) => {
         // Crear el header de configuración de axios
         const config = {
             headers: {
-                "Content-Type": "application/json",
+                'Content-Type': 'application/json',
                 Authorization: `Bearer ${token}`
             }
         };
@@ -145,7 +145,7 @@ const AuthProvider = ({children}) => {
             // Crear el header de configuración de axios
             const config = {
                 headers: {
-                    "Content-Type": "application/json",
+                    'Content-Type': 'application/json',
                     Authorization: `Bearer ${token}`
                 }
             };
@@ -175,7 +175,7 @@ const AuthProvider = ({children}) => {
                 auth, setAuth, loading, logOut, updateAccountData, changePassword, deleteAccount
             }}
         >
-            {children}
+            { children }
         </AuthContext.Provider>
     )
 };

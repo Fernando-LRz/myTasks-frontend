@@ -87,13 +87,15 @@ const ResetPassword = () => {
 
             <div className="mt-20 md:mt-5 shadow-lg rounded-xl px-5 py-10 bg-white">
 
-                { msg &&  <Alert 
-                    alert={alert} 
-                />}
+                { 
+                    msg &&  <Alert 
+                        alert={ alert } 
+                    />
+                }
 
                 { authenticToken && (
                     <>
-                        <form onSubmit={handleSubmit}>
+                        <form onSubmit={ handleSubmit }>
                             <div className="my-5">
                                 <label  
                                     className="uppercase text-gray-600 block text-xl font-bold">
@@ -103,8 +105,8 @@ const ResetPassword = () => {
                                     type="password" 
                                     placeholder="Ingresa tu nueva contraseña" 
                                     className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
-                                    value={password}
-                                    onChange={e => setPassword(e.target.value)}
+                                    value={ password }
+                                    onChange={ e => setPassword(e.target.value) }
                                 />
                             </div>
 
@@ -118,18 +120,19 @@ const ResetPassword = () => {
                     </>     
                 )}
 
-                { newPassword && 
-                    <nav className="mt-10 lg:flex lg:justify-between">
-                        <Link 
-                            className="block text-center my-5 text-gray-500"
-                            to="/" >Iniciar Sesión
-                        </Link>
+                { 
+                    newPassword && 
+                        <nav className="mt-10 lg:flex lg:justify-between">
+                            <Link 
+                                className="block text-center my-5 text-gray-500"
+                                to="/" >Iniciar Sesión
+                            </Link>
 
-                        <Link 
-                            className="block text-center my-5 text-gray-500"
-                            to="/signup" >¿Necesitas una cuenta nueva? Crear Cuenta
-                        </Link>
-                    </nav>
+                            <Link 
+                                className="block text-center my-5 text-gray-500"
+                                to="/signup" >¿Necesitas una cuenta nueva? Crear Cuenta
+                            </Link>
+                        </nav>
                 }
 
             </div>

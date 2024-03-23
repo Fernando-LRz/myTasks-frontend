@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axiosClient from '../config/axios';
+
 import Alert from '../components/Alert';
  
 const ConfirmEmail = () => {
@@ -45,23 +46,27 @@ const ConfirmEmail = () => {
     return (
       <>
           <div>
-                <h1 className="text-indigo-600 font-black text-6xl">
-                    Confirma tu E-mail y Comienza a Administrar tus tareas con {""}
+                <h1 className="text-indigo-600 font-black text-5xl">
+                    Confirme su cuenta para comenzar a utilizar {""}
                     <span className="text-black">myTasks</span>
                 </h1>     
           </div>
 
           <div className="mt-20 md:mt-5 shadow-lg rounded-xl px-5 py-10 bg-white">
-              { !loading &&  <Alert 
-                  alert={alert} 
-              />}
+              { 
+                !loading &&  <Alert 
+                    alert={ alert } 
+                />
+              }
 
-              { confirmedEmail && (
-                  <Link 
-                      className="block text-center my-5 text-gray-500"
-                      to="/">Iniciar sesión
-                  </Link>
-              )}
+              { 
+                confirmedEmail && (
+                    <Link 
+                        className="block text-center my-5 text-gray-500"
+                        to="/">Iniciar sesión
+                    </Link>
+                )
+              }
           </div>
       </>
     )

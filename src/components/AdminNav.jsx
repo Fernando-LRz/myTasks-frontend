@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const AdminNav = () => {
     return (
-        <nav className='flex gap-6 ml-10'>
+        <nav className="flex gap-6 ml-10">
             <Link
                 to="/admin/account"
                 className="font-bold uppercase text-gray-500"

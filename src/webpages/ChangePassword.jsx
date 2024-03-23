@@ -56,10 +56,10 @@ const changePassword = () => {
             <div className='flex justify-center'>
                 <div className='w-full md:w-1/2 bg-white shadow rounded-lg p-5'>
 
-                    { msg && <Alert alert={alert}/> }
+                    { msg && <Alert alert={ alert }/> }
 
                     <form
-                        onSubmit={handleSubmit}
+                        onSubmit={ handleSubmit }
                     >
                         <div className='my-3'>
                             <label htmlFor="name" className='uppercase font-bold text-gray-600'>Contraseña Actual</label>
@@ -68,9 +68,9 @@ const changePassword = () => {
                                 className='border bg-gray-50 w-full p-2 mt-5 rounded-lg'
                                 name='current_pwd'
                                 placeholder='Ingresa tu contraseña actual'
-                                onChange={e => setPassword({
+                                onChange={ e => setPassword({
                                     ...password, 
-                                    [e.target.name] : e.target.value
+                                    [ e.target.name ] : e.target.value
                                 })}
                             />
                         </div>
@@ -81,9 +81,9 @@ const changePassword = () => {
                                 className='border bg-gray-50 w-full p-2 mt-5 rounded-lg'
                                 name='new_pwd'
                                 placeholder='Ingresa tu nueva contraseña'
-                                onChange={e => setPassword({
+                                onChange={ e => setPassword({
                                     ...password, 
-                                    [e.target.name] : e.target.value
+                                    [ e.target.name ] : e.target.value
                                 })}
                             />
                         </div>

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+
 import axiosClient from '../config/axios';
 import Alert from '../components/Alert';
 
@@ -17,13 +18,13 @@ const SignUp = () => {
       e.preventDefault();
       
       // Validar formulario
-      if([name, lastname, email, password, repeatPassword].includes('')){
+      if([ name, lastname, email, password, repeatPassword ].includes('')){
           setAlert({ msg: 'Todos los campos son obligatorios', error: true });
           return;
       }
 
       if(password !== repeatPassword) {
-          setAlert({ msg: 'Las contraseñas son diferentes', error: true });
+          setAlert({ msg: 'Las contraseñas no coinciden', error: true });
           return;
       }
 
@@ -41,7 +42,7 @@ const SignUp = () => {
 
         // Mostrar alerta de éxito
         setAlert({
-          msg: 'Tu cuenta ha sido creada correctamente, revisa tu e-mail',
+          msg: 'Cuenta creada correctamente, confirme su e-mail para comenzar a utilizarla.',
           error: false
         });
         
@@ -60,18 +61,19 @@ const SignUp = () => {
       <>
           <div>
                 <h1 className="text-indigo-600 font-black text-6xl">
-                    Crea una Cuenta en myTasks y Administra {""}
-                    <span className="text-black">tus Tareas</span>
+                    Crea una cuenta en {""}
+                    <span className="text-black">myTasks</span>
                 </h1>     
           </div>
 
-          <div className="mt-20 md:mt-5 shadow-lg rounded-xl px-5 py-10 bg-white">
+          <div className="md:mt-5 shadow-lg rounded-xl px-5 py-10 bg-white">
+              { 
+                msg &&  <Alert 
+                    alert={ alert } 
+                />
+              }
 
-              { msg &&  <Alert 
-                  alert={alert} 
-              />}
-
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={ handleSubmit }>
                   <div className="my-5">
                       <label  
                           className="uppercase text-gray-600 block text-xl font-bold">
@@ -81,8 +83,8 @@ const SignUp = () => {
                           type="text" 
                           placeholder="Ingresa tu nombre" 
                           className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
-                          value={name}
-                          onChange={e => setName(e.target.value)}
+                          value={ name }
+                          onChange={ e => setName(e.target.value) }
                       />
                   </div>
 
@@ -95,8 +97,8 @@ const SignUp = () => {
                           type="text" 
                           placeholder="Ingresa tus apellidos" 
                           className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
-                          value={lastname}
-                          onChange={e => setLastname(e.target.value)}
+                          value={ lastname }
+                          onChange={ e => setLastname(e.target.value) }
                       />
                   </div>
 
@@ -109,8 +111,8 @@ const SignUp = () => {
                           type="email" 
                           placeholder="Ingresa tu correo electrónico" 
                           className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
-                          value={email}
-                          onChange={e => setEmail(e.target.value)}
+                          value={ email }
+                          onChange={ e => setEmail(e.target.value) }
                       />
                   </div>
 
@@ -123,8 +125,8 @@ const SignUp = () => {
                           type="password" 
                           placeholder="Escribe una contraseña" 
                           className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
-                          value={password}
-                          onChange={e => setPassword(e.target.value)}
+                          value={ password }
+                          onChange={ e => setPassword(e.target.value) }
                       />
                   </div>
 
@@ -137,8 +139,8 @@ const SignUp = () => {
                           type="password" 
                           placeholder="Confirma tu contraseña" 
                           className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
-                          value={repeatPassword}
-                          onChange={e => setRepeatPassword(e.target.value)}
+                          value={ repeatPassword }
+                          onChange={ e => setRepeatPassword(e.target.value) }
                       />
                   </div>
 

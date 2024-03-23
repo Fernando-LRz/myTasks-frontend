@@ -42,8 +42,8 @@ const EditAccount = () => {
     return (
         <>
             <AdminNav />
-            <h2 className='font-black text-3xl text-center mt-10'>Editar Datos de la Cuenta</h2>
-            <p className='text-xl mt-5 mb-10 text-center'>Modifica tu {''} 
+            <h2 className='font-black text-3xl text-center mt-10'>Editar datos de la cuenta</h2>
+            <p className='text-xl mt-5 mb-10 text-center'>Actualiza tu {''} 
                 <span className='text-indigo-600 font-bold'>información aquí</span>
             </p>
 
@@ -53,7 +53,7 @@ const EditAccount = () => {
                     { msg && <Alert alert={alert}/> }
 
                     <form
-                        onSubmit={handleSubmit}
+                        onSubmit={ handleSubmit }
                     >
                         <div className='my-3'>
                             <label htmlFor="name" className='uppercase font-bold text-gray-600'>Nombre</label>
@@ -62,9 +62,9 @@ const EditAccount = () => {
                                 className='border bg-gray-50 w-full p-2 mt-5 rounded-lg'
                                 name='name'
                                 value={ accountData.name || '' }
-                                onChange={e => setAccountData({
+                                onChange={ e => setAccountData({
                                     ...accountData, 
-                                    [e.target.name] : e.target.value
+                                    [ e.target.name ] : e.target.value
                                 })}
                             />
                         </div>
@@ -75,9 +75,9 @@ const EditAccount = () => {
                                 className='border bg-gray-50 w-full p-2 mt-5 rounded-lg'
                                 name='lastname'
                                 value={ accountData.lastname || '' }
-                                onChange={e => setAccountData({
+                                onChange={ e => setAccountData({
                                     ...accountData, 
-                                    [e.target.name] : e.target.value
+                                    [ e.target.name ] : e.target.value
                                 })}
                             />
                         </div>
@@ -88,9 +88,9 @@ const EditAccount = () => {
                                 className='border bg-gray-50 w-full p-2 mt-5 rounded-lg'
                                 name='email'
                                 value={ accountData.email || '' }
-                                onChange={e => setAccountData({
+                                onChange={ e => setAccountData({
                                     ...accountData, 
-                                    [e.target.name] : e.target.value
+                                    [ e.target.name ] : e.target.value
                                 })}
                             />
                         </div>

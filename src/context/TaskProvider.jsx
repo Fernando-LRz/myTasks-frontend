@@ -1,6 +1,7 @@
 import { createContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axiosClient from '../config/axios';
+
 import useAuth from '../hooks/useAuth';
 
 // Crear el context de las tareas
@@ -28,7 +29,7 @@ const TaskProvider = ({children}) => {
                 // Crear el objeto de configuración
                 const config = {
                     headers: {
-                        "Content-Type": "application/json",
+                        'Content-Type': 'application/json',
                         Authorization: `Bearer ${token}`
                     }
                 };
@@ -54,7 +55,7 @@ const TaskProvider = ({children}) => {
         // Crear el objeto de configuración
         const config = {
             headers: {
-                "Content-Type": "application/json",
+                'Content-Type': 'application/json',
                 Authorization: `Bearer ${token}`
             }
         };
@@ -106,7 +107,7 @@ const TaskProvider = ({children}) => {
         // Crear el objeto de configuración
         const config = {
             headers: {
-                "Content-Type": "application/json",
+                'Content-Type': 'application/json',
                 Authorization: `Bearer ${token}`
             }
         };
@@ -137,7 +138,7 @@ const TaskProvider = ({children}) => {
                 // Crear el objeto de configuración
                 const config = {
                     headers: {
-                        "Content-Type": "application/json",
+                        'Content-Type': 'application/json',
                         Authorization: `Bearer ${token}`
                     }
                 };

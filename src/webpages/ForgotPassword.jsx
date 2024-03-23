@@ -46,18 +46,20 @@ const ForgotPassword = () => {
       <>
         <div>
             <h1 className="text-indigo-600 font-black text-6xl">
-                Recupera el Acceso a tu Cuenta en {""}
+                Recupera el acceso a tu cuenta de {""}
                 <span className="text-black">myTasks</span>
             </h1>     
         </div>
         <div className="mt-20 md:mt-5 shadow-lg rounded-xl px-5 py-10 bg-white">
 
-            { msg &&  <Alert 
-                alert={alert} 
-            />}
+            { 
+                msg &&  <Alert 
+                    alert={ alert } 
+                />
+            }
 
             <form
-                onSubmit={handleSubmit}
+                onSubmit={ handleSubmit }
             >
                 <div className="my-5">
                     <label  
@@ -68,14 +70,14 @@ const ForgotPassword = () => {
                         type="email" 
                         placeholder="Ingresa tu correo electrónico" 
                         className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
-                        value={email}
-                        onChange={e => setEmail(e.target.value)}
+                        value={ email }
+                        onChange={ e => setEmail(e.target.value) }
                     />
                 </div>
 
                 <input 
                     type="submit"
-                    value="Enviar Instrucciones"
+                    value="Enviar instrucciones"
                     className="bg-indigo-700 w-full py-3 px-10 rounded-xl text-white font-bold 
                     hover:bg-indigo-800 hover:cursor-pointer md:w-auto"
                 />

@@ -55,17 +55,19 @@ const Login = () => {
         <>
             <div>
                 <h1 className="text-indigo-600 font-black text-6xl">
-                    Administra tus Tareas con {""}
+                    Administra tus tareas con {""}
                     <span className="text-black">myTasks</span>
                 </h1>     
             </div>
             <div className="mt-20 md:mt-5 shadow-lg rounded-xl px-5 py-10 bg-white">
 
-                { msg &&  <Alert 
-                    alert={alert} 
-                />}
+                { 
+                    msg &&  <Alert 
+                        alert={ alert } 
+                    />
+                }
 
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={ handleSubmit }>
                     <div className="my-5">
                         <label  
                             className="uppercase text-gray-600 block text-xl font-bold">
@@ -75,8 +77,8 @@ const Login = () => {
                             type="email" 
                             placeholder="Ingresa tu correo electrónico" 
                             className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
-                            value={email}
-                            onChange={e => setEmail(e.target.value)}
+                            value={ email }
+                            onChange={ e => setEmail(e.target.value) }
                         />
                     </div>
                     <div className="my-5">
@@ -88,8 +90,8 @@ const Login = () => {
                             type="password" 
                             placeholder="Ingresa tu contraseña" 
                             className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
-                            value={password}
-                            onChange={e => setPassword(e.target.value)}
+                            value={ password }
+                            onChange={ e => setPassword(e.target.value) }
                         />
                     </div>
 

@@ -41,12 +41,14 @@ const DeleteAccount = () => {
             <div className='flex justify-center'>
                 <div className='w-full md:w-1/2 bg-white shadow rounded-lg p-5'>
 
-                    { msg && <Alert alert={alert}/> }
+                    { msg && <Alert alert={ alert }/> }
 
-                    <p className='text-lg text-center'>Si elimina su cuenta se perderán todas sus tareas y no podrá recuperarlas, incluso si vuelve a crear una cuenta con el mismo correo electrónico.</p>
+                    <p className='text-lg text-center'>
+                        Si elimina su cuenta se perderán todas sus tareas y no podrá recuperarlas, incluso si vuelve a crear una cuenta con el mismo correo electrónico.
+                    </p>
 
                     <form
-                        onSubmit={handleSubmit}
+                        onSubmit={ handleSubmit }
                         className='flex justify-center'
                     >
                         <input 

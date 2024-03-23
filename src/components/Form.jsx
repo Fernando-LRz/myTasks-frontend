@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import Alert from './Alert';
+
 import useTasks from '../hooks/useTasks';
+import Alert from './Alert';
 
 const Form = () => {
 
@@ -22,7 +23,7 @@ const Form = () => {
             setTime(task.time);
             setDescription(task.description);
         }
-    }, [task]);
+    }, [ task ]);
 
     const formatDate = (longDate) => {
         const date = longDate.split('T');
@@ -33,7 +34,7 @@ const Form = () => {
         e.preventDefault();
 
         // Validar el formulario
-        if([name, date, time, description].includes('')) {
+        if([ name, date, time, description ].includes('')) {
             setAlert({
                 msg: 'Todos los campos son obligatorios',
                 error: true
@@ -62,19 +63,19 @@ const Form = () => {
     
     return (
         <> 
-            <h2 className='font-black text-3xl text-center'>Tarea Nueva</h2>
-            <p className='text-xl mt-5 mb-10 text-center'>
-                Agrega nuevas {''} 
-                <span className='text-indigo-600 font-bold'>Tareas</span>
+            <h2 className="font-black text-3xl text-center">Registrar tarea</h2>
+            <p className="text-xl mt-5 mb-10 text-center">
+                Crea una nueva {""} 
+                <span className="text-indigo-600 font-bold">tarea</span>
             </p>
 
-            <div className='w-4/5 mx-auto'>
-                {msg && <Alert alert={alert} />}
+            <div className="w-4/5 mx-auto">
+                { msg && <Alert alert={ alert } /> }
             </div>
             
             <form
                 className="bg-white py-10 px-5 mb-10 lg:mb-5 shadow-md rounded-md w-4/5 mx-auto"
-                onSubmit={handleSubmit}
+                onSubmit={ handleSubmit }
             >
                 <div className="mb-5">
                     <label 
@@ -86,8 +87,8 @@ const Form = () => {
                         type="text" 
                         placeholder="Nombre de la tarea"
                         className="border-2 w-full p-2 mt-2 placeholderbg-gray-400 rounded-md"
-                        value={name}
-                        onChange={e => setName(e.target.value)}
+                        value={ name }
+                        onChange={ e => setName(e.target.value) }
                     />
                 </div>
                 <div className="mb-5">
@@ -99,8 +100,8 @@ const Form = () => {
                         id="date"
                         type="date" 
                         className="border-2 w-full p-2 mt-2 placeholderbg-gray-400 rounded-md"
-                        value={formatDate(date)}
-                        onChange={e => setDate(e.target.value)}
+                        value={ formatDate(date) }
+                        onChange={ e => setDate(e.target.value) }
                     />
                 </div>
                 <div className="mb-5">
@@ -112,8 +113,8 @@ const Form = () => {
                         id="time"
                         type="time" 
                         className="border-2 w-full p-2 mt-2 placeholderbg-gray-400 rounded-md"
-                        value={time}
-                        onChange={e => setTime(e.target.value)}
+                        value={ time }
+                        onChange={ e => setTime(e.target.value) }
                     />
                 </div>
                 <div className="mb-5">
@@ -125,8 +126,8 @@ const Form = () => {
                         id="description"
                         placeholder="Descripción de la tarea"
                         className="border-2 w-full p-2 mt-2 placeholderbg-gray-400 rounded-md"
-                        value={description}
-                        onChange={e => setDescription(e.target.value)}
+                        value={ description }
+                        onChange={ e => setDescription(e.target.value) }
                     ></textarea> 
                 </div>
 
